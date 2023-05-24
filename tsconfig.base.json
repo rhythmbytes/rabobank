@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@rabobank/data": ["libs/data/src/index.ts"],
+      "@rabobank/shared": ["libs/shared/src/index.ts"],
       "@rabobank/ui": ["libs/ui/src/index.ts"]
     }
   },
