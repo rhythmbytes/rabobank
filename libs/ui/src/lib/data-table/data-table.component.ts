@@ -102,7 +102,7 @@ export class DataTableComponent implements OnInit, OnChanges {
   }
 
   openDetailsDialog(row: any) {
-    if (!row.isEditing) {
+    if (!row.isEditing && this.dialog.openDialogs.length == 0) {
       this.dialog.open(DataDialogComponent, {
         disableClose: false,
         data: {
