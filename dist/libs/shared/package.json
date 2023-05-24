@@ -1,0 +1,24 @@
+{
+  "name": "@rabobank/shared",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "module": "esm2022/rabobank-shared.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "esm2022": "./esm2022/rabobank-shared.mjs",
+      "esm": "./esm2022/rabobank-shared.mjs",
+      "default": "./esm2022/rabobank-shared.mjs"
+    }
+  }
+}
