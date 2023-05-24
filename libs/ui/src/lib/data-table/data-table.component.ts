@@ -16,6 +16,7 @@ import {
   FormControl,
   FormGroup,
 } from '@angular/forms';
+import { SharedModule } from '@rabobank/shared';
 
 @Component({
   selector: 'rabobank-data-table',
@@ -26,6 +27,7 @@ import {
     ReactiveFormsModule,
     MatTableModule,
     MatInputModule,
+    SharedModule,
   ],
   templateUrl: './data-table.component.html',
   styleUrls: ['./data-table.component.scss'],
