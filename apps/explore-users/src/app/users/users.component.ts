@@ -14,7 +14,13 @@ import { DataTableComponent } from '@rabobank/ui';
 export class UsersComponent {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dataSource: any = signal([]);
-  displayedColumns: string[] = ['id', 'fullName', 'displayName', 'email'];
+  displayedColumns: string[] = [
+    'id',
+    'fullName',
+    'displayName',
+    'email',
+    'action',
+  ];
   constructor(private json2usersService: Json2usersService) {
     this.dataSource = computed(() => this.json2usersService.users());
   }
