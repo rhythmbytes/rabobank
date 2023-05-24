@@ -17,10 +17,9 @@ import { SharedModule } from '@rabobank/shared';
 export class DataDialogComponent {
   constructor(
     private dialogRef: MatDialogRef<DataDialogComponent>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {
-    console.log(data.row);
-  }
+  ) {}
 
   close() {
     this.dialogRef.close();

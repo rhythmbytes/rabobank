@@ -101,6 +101,7 @@ export class DataTableComponent implements OnInit, OnChanges {
     VOFormElement.get('VORows').at(i).get('isEditing').patchValue(false);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   openDetailsDialog(row: any) {
     if (!row.isEditing && this.dialog.openDialogs.length == 0) {
       this.dialog.open(DataDialogComponent, {
