@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rabobank/data": ["libs/data/src/index.ts"]
+      "@rabobank/data": ["libs/data/src/index.ts"],
+      "@rabobank/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
