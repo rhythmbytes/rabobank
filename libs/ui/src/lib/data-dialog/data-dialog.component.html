@@ -1,0 +1,12 @@
+<h1 mat-dialog-title class="title">User details</h1>
+<div mat-dialog-content>
+  <ng-container *ngFor="let field of data.displayFields">
+    <p>
+      <span class="field-label">{{ field | camelCaseToTitle }}:</span>
+      {{ data.row[field] }}
+    </p>
+  </ng-container>
+</div>
+<div mat-dialog-actions>
+  <button (click)="close()">Close</button>
+</div>

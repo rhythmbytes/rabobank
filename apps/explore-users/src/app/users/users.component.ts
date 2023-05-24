@@ -20,6 +20,7 @@ export class UsersComponent {
     'displayName',
     'email',
     'action',
+    'details',
   ];
   constructor(private json2usersService: Json2usersService) {
     this.dataSource = computed(() => this.json2usersService.users());

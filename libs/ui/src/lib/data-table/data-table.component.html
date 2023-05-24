@@ -75,6 +75,7 @@
         mat-row
         *matRowDef="let row; columns: displayedColumns"
         rabobankRowHighlight
+        (click)="openDetailsDialog(row.value)"
       ></tr>
     </table>
   </ng-container>
