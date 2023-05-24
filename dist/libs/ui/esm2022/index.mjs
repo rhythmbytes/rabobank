@@ -1,4 +1,0 @@
-export * from './lib/ui.module';
-export * from './lib/data-table/data-table.component';
-export * from './lib/data-dialog/data-dialog.component';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9saWJzL3VpL3NyYy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxjQUFjLGlCQUFpQixDQUFDO0FBRWhDLGNBQWMsdUNBQXVDLENBQUM7QUFDdEQsY0FBYyx5Q0FBeUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4vbGliL3VpLm1vZHVsZSc7XG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2RhdGEtdGFibGUvZGF0YS10YWJsZS5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvZGF0YS1kaWFsb2cvZGF0YS1kaWFsb2cuY29tcG9uZW50JztcbiJdfQ==
