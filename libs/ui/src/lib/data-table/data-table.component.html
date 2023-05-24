@@ -38,7 +38,7 @@
               mat-icon-button
               class="material-icons app-toolbar-menu save-button"
               matTooltip="Save Changes"
-              (click)="SaveVO(form, i)"
+              (click)="SaveVO($event, form, i)"
               *ngIf="form.get('VORows')?.value[i]?.isEditing"
               color="primary"
             >
@@ -50,7 +50,7 @@
               class="material-icons app-toolbar-menu cancel-button"
               matTooltip="Cancel Changes"
               color="warn"
-              (click)="CancelSVO(form, i)"
+              (click)="CancelSVO($event, form, i)"
               *ngIf="form.get('VORows')?.value[i]?.isEditing"
             >
               Cancel
@@ -62,7 +62,7 @@
               *ngIf="!form.get('VORows')?.value[i]?.isEditing"
               matTooltip="Edit"
               color="primary"
-              (click)="EditSVO(form, i)"
+              (click)="EditSVO($event, form, i)"
             >
               Edit
             </button>

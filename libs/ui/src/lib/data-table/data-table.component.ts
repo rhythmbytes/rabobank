@@ -84,27 +84,32 @@ export class DataTableComponent implements OnInit, OnChanges {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  EditSVO(VOFormElement: any, i: number) {
+  EditSVO(ev: Event, VOFormElement: any, i: number) {
+    ev.stopPropagation();
     VOFormElement.get('VORows').at(i).get('isEditing').patchValue(true);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  SaveVO(VOFormElement: any, i: number) {
+  SaveVO(ev: Event, VOFormElement: any, i: number) {
+    ev.stopPropagation();
     VOFormElement.get('VORows').at(i).get('isEditing').patchValue(false);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  CancelSVO(VOFormElement: any, i: number) {
+  CancelSVO(ev: Event, VOFormElement: any, i: number) {
+    ev.stopPropagation();
     VOFormElement.get('VORows').at(i).get('isEditing').patchValue(false);
   }
 
   openDetailsDialog(row: any) {
-    this.dialog.open(DataDialogComponent, {
-      disableClose: false,
-      data: {
-        displayFields: ['id', 'fullName', 'displayName', 'email', 'details'],
-        row,
-      },
-    });
+    if (!row.isEditing) {
+      this.dialog.open(DataDialogComponent, {
+        disableClose: false,
+        data: {
+          displayFields: ['id', 'fullName', 'displayName', 'email', 'details'],
+          row,
+        },
+      });
+    }
   }
 }
