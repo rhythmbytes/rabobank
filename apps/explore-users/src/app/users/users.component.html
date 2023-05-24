@@ -1,3 +1,5 @@
-<ng-container *ngIf="users()">
-  {{ users() | json }}
-</ng-container>
+<rabobank-data-table
+  *ngIf="dataSource()"
+  [displayedColumns]="displayedColumns"
+  [dataSource]="dataSource()"
+></rabobank-data-table>
