@@ -1,17 +1,17 @@
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User, UserJsonResponse } from '../interfaces/interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Json2usersService {
   JSON_URL = '../../assets/users.json';
-  users = signal([]);
+  users = signal<User[]>([]);
 
   constructor(private http: HttpClient) {
-    this.http.get(this.JSON_URL).subscribe({
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      next: (data: any) => {
+    this.http.get<UserJsonResponse>(this.JSON_URL).subscribe({
+      next: (data: UserJsonResponse) => {
         this.users.set(data?.users);
       },
       error: () => {
@@ -20,7 +20,7 @@ export class Json2usersService {
     });
   }
 
-  getUsers() {
+  getUsers(): User[] {
     return this.users();
   }
 }

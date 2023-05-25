@@ -19,6 +19,7 @@ import {
 } from '@angular/forms';
 import { SharedModule } from '@rabobank/shared';
 import { DataDialogComponent } from '../data-dialog/data-dialog.component';
+import { User } from '@rabobank/data';
 
 @Component({
   selector: 'rabobank-data-table',
@@ -63,8 +64,7 @@ export class DataTableComponent implements OnInit, OnChanges {
   private initForm() {
     this.form = this.fb.group({
       VORows: this.fb.array(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        this.dataSource?.map((val: any) =>
+        this.dataSource?.map((val: User) =>
           this.fb.group({
             id: new FormControl(val.id),
             fullName: new FormControl(val.fullName),

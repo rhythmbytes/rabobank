@@ -1,6 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataModule, Json2usersService } from '@rabobank/data';
+import { DataModule, Json2usersService, User } from '@rabobank/data';
 import { DataTableComponent } from '@rabobank/ui';
 
 @Component({
@@ -13,7 +13,7 @@ import { DataTableComponent } from '@rabobank/ui';
 })
 export class UsersComponent {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  dataSource: any = signal([]);
+  dataSource: any = signal<User[]>([]);
   displayedColumns: string[] = [
     'id',
     'fullName',

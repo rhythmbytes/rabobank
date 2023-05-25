@@ -9,6 +9,7 @@ import { RowHighlightDirective } from './row-highlight.directive';
 class TestComponent {}
 
 describe('RowHighlightDirective', () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let divElement: DebugElement;
