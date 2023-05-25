@@ -56,6 +56,14 @@ Run `nx serve explore-users` for a dev server. Navigate to http://localhost:4200
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
 
+## Unit testing
+
+Run `npx nx run-many --target=test` to run unit tests for all projects in parallel
+
+Run `npx nx run PROJECT:test`, where **PROJECT** is one of existing projects like _explore-users_, _ui_, _data_ or _shared_. For example:
+
+> npx nx run explore-users:test
+
 ## Remote caching
 
 Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.

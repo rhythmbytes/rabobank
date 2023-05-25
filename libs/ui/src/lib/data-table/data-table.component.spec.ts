@@ -12,6 +12,10 @@ describe('DataTableComponent', () => {
 
     fixture = TestBed.createComponent(DataTableComponent);
     component = fixture.componentInstance;
+    component['dataSource'] = [
+      { id: 1, name: 'John' },
+      { id: 2, name: 'Jane' },
+    ];
     fixture.detectChanges();
   });
 
